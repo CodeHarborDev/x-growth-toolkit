@@ -1,0 +1,15 @@
+{
+  "timezone": "UTC",
+  "jobs": [
+    {
+      "task_file": "examples/task.example.json",
+      "window": { "start": "09:00", "end": "17:00" },
+      "days": ["mon", "wed", "fri"],
+      "jitter_seconds": 90
+    }
+  ],
+  "limits": {
+    "max_posts_per_hour": 2,
+    "pause_on_error_count": 3
+  }
+}
