@@ -1,0 +1,19 @@
+project:
+  name: x-growth-toolkit
+  mode: dry-run
+
+accounts:
+  source: examples/account-profile.example.json
+  profile_root: ./var/profiles
+  require_human_approval_for: [dm, delete, bulk_engagement]
+
+scheduler:
+  timezone: UTC
+  max_concurrent_jobs: 2
+  minimum_delay_seconds: 45
+  retry_limit: 3
+
+logging:
+  level: INFO
+  format: json
+  directory: ./var/logs
